@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <title>Estrutura da Página</title>
+    <link rel="stylesheet" href="../../Styles/Main.css">
+    <link rel="stylesheet" href="../../Styles/Home.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo"></div>
+            <h2>MAIS PÁGINAS</h2>
+            <button class="menu-item" id="dif">Tela inicial</button>
+            <button class="menu-item">Área de trabalho</button>
+            <button class="menu-item">Lixeira</button>
+            <button class="menu-item">Linha do tempo</button>
+            <button class="menu-item">Configurações</button>
+            <div class="user-avatar"></div>
+            <div>Nome usuário</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" style="background-color: transparent;">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <input type="checkbox" role="switch" class="liquid-3" />
+                <input type="text" class="search-bar" placeholder="Pesquisar...">
+                <div class="top-icons">
+                    <div class="icon"></div>
+                    <div class="icon"><i class="fi fi-rs-bell"></i></div>
+                </div>
+            </div>
+
+            <!-- Timeline and Starred Files -->
+            <div style="display: flex; gap: 20px;">
+                <!-- Timeline -->
+                <section class="timeline" style="flex: 2;">
+                    <h1>Linha do tempo</h1>
+                    <div class="date-filter">
+                        <div>1 Out, 2024</div>
+                        <div class="filters">
+                            <div>Hoje</div>
+                            <div>Semana</div>
+                            <div>Mês</div>
+                            <div>Ano</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="files-list">
+                        <p>Tipo Arquivo</p>
+                        <p>Tipo Arquivo</p>
+                        <p>Tipo Arquivo</p>
+                        <p>Tipo Arquivo</p>
+                    </div>
+                </section>
+
+                <!-- Starred Files -->
+                <div class="starred-files" style="flex: 1;">
+                    <div class="starred white">
+                        <div class="star" style="color: #000;">★</div>
+                    </div>
+                    <div class="starred black">
+                        <div class="star">★</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Files Section -->
+            <div class="files-section">
+                <h2>SEUS ARQUIVOS</h2>
+                <div class="file-list-container">
+                    <div class="file-name">
+                        <div class="small-circle"></div>
+                        Nome do arquivo
+                    </div>
+                    <div class="file-name">
+                        <div class="small-circle"></div>
+                        Nome do arquivo
+                    </div>
+                    <div class="file-name">
+                        <div class="small-circle"></div>
+                        Nome do arquivo
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="small-circle"></div>
+                        Quantidade de arquivos: </br>0
+                    </div>
+                    <div class="stat-item">
+                        <div class="small-circle"></div>
+                        Arquivos compartilhados:</br>0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

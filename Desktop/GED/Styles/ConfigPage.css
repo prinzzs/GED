@@ -1,0 +1,90 @@
+body {
+  background-color: #e2e2e2;
+  color: #000;
+  font-family: "Arial", sans-serif;
+}
+
+.settings-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  margin-top: 0%;
+  padding-top: 0%;
+}
+
+.settings-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 50px;
+  border-bottom: 0px;
+  color: black;
+  font-family: Branding;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.settings-section h4 {
+  margin-bottom: 15px;
+  font-size: 29px;
+  border-bottom: 0px;
+  color: black;
+  font-family: Creolia;
+}
+
+.form-select {
+  border: 1px solid rgb(167, 167, 167);
+  color: black;
+  background-color: #09090f;
+}
+
+.form-select:focus {
+  box-shadow: 0 0 5px #ffffff;
+}
+
+.btn-primary {
+  color: white;
+  background-color: black;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.btn-primary:hover {
+  color: black;
+  background-color: #e2e2e2;
+}
+
+.btn-primary1 {
+  color: white;
+  background-color: #6b63b5;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.btn-primary1:hover {
+  color: white;
+  background-color: #475292;
+}
+
+.form-label {
+  font-size: 19px;
+}
+
+.form-control {
+  background-color: #09090f;
+}
+.form-control:focus {
+  background-color: #09090f;
+}
+.form-check-input:checked {
+  background-color: #475292;
+}
