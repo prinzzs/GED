@@ -8,6 +8,7 @@
     <title>Estrutura da Página</title>
     <link rel="stylesheet" href="../../Styles/Main.css">
     <link rel="stylesheet" href="../../Styles/Home.css">
+    <link rel="stylesheet" href="../../Styles/document.css">
 </head>
 
 <body>
@@ -101,6 +102,31 @@
             </div>
         </div>
     </div>
+
+
+
+    <div id="opacity-Effect"></div>
+
+    <!-- Aqui é o container que aparecerá quando o usuário clicar para colocar documento no site.-->
+<div id="container">
+    <div class="file-input-wrapper" id="fileInputWrapper">
+        <div class="file-container" id="file-container"></div>
+    </div>
+</div>
+
+    <!-- Esse é o botão Adicionar q fica no canto da tela e ao clicar nele, ele ativa um dropdown q coloca 2 elementos de botão-->
+    <!-- O primeiro botão coloca pastas, e o segundo coloca documentos(por enquanto o das pastas fez o L)-->
+<div class="corner-button">
+    <button id="dropdownButton"> Adicionar <i class="fas fa-plus"></i></button>
+    <div id="dropdownMenu" class="dropdown-content">
+        <button id="btn-Options" title="Criação de pasta"></button>
+        <button id="btn-Options2" title="Upload de documento"><input type="file" id="fileInput"></button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous" ></script>
+    <script src="../../Scripts/Document.js"></script>
+    <script src="../../Scripts/telaPrincipal.js"></script>
 </body>
 
 </html>
