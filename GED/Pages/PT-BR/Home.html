@@ -23,7 +23,7 @@
             <a href="#" class="menu-item">Linha do tempo</a>
             <a href="./ConfigPage.html" class="menu-item">Configurações</a>
             <div class="user-avatar"></div>
-            <div>Nome usuário</div>
+            <div class="user-name">Nome usuário</div>
         </div>
 
         <div>
@@ -41,7 +41,7 @@
 
 
                     <div class="toggle">
-                        <input type="checkbox">
+                        <input type="checkbox" id="inCheck" onchange="backgroundColor()">
                         <span class="button"></span>
                         <span class="label">
                             <svg width="32" xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +54,8 @@
 
 
                     <div class="top-icons">
-                        <div class="icon" style="background-color: #000000;"></div>
-                        <div class="icon" style="background-color: #FFFFFF;"><i class="fi fi-rs-bell"></i></div>
+                        <div class="icon" style="background-color: var(--primary-color);"></div>
+                        <div class="icon" style="background-color: var(--secondary-color);"><i class="fi fi-rs-bell"></i></div>
                     </div>
                 </div>
 
@@ -74,21 +74,21 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="files-list">
-                            <p>Tipo Arquivo</p>
-                            <p>Tipo Arquivo</p>
-                            <p>Tipo Arquivo</p>
-                            <p>Tipo Arquivo</p>
+                        <div class="files-list ">
+                            <p class="text-settings">Tipo Arquivo</p>
+                            <p class="text-settings">Tipo Arquivo</p>
+                            <p class="text-settings">Tipo Arquivo</p>
+                            <p class="text-settings">Tipo Arquivo</p>
                         </div>
                     </section>
 
                     <!-- Starred Files -->
                     <div class="starred-files" style="flex: 1;">
-                        <div class="starred white">
-                            <div class="star" style="color: #000;">★</div>
+                        <div class="starred light">
+                            <div class="star" style="color: var(--primary-color);">★</div>
                         </div>
-                        <div class="starred black">
-                            <div class="star">★</div>
+                        <div class="starred dark">
+                            <div class="star" style="color: var(--secondary-color)">★</div>
                         </div>
                     </div>
                 </div>
@@ -100,25 +100,25 @@
                         <h2>SEUS </br> ARQUIVOS</h2>
                         <div class="stat-item">
                             <div class="small-circle"></div>
-                            Quantidade de arquivos: </br>1234
+                            Quantidade de arquivos:0
                         </div>
                         <div class="stat-item">
                             <div class="small-circle"></div>
-                            Arquivos compartilhados:</br> 1234
+                            Arquivos compartilhados:0
                         </div>
                     </div>
                     <div class="file-list-container">
                         <div class="file-name">
                             <div class="small-circle"></div>
-                            Nome do arquivo
+                            <p class="text-settings">Nome do arquivo</p>
                         </div>
                         <div class="file-name">
                             <div class="small-circle"></div>
-                            Nome do arquivo
+                            <p class="text-settings">Nome do arquivo</p>
                         </div>
                         <div class="file-name">
                             <div class="small-circle"></div>
-                            Nome do arquivo
+                            <p class="text-settings">Nome do arquivo</p>
                         </div>
                     </div>
 

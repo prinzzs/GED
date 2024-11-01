@@ -12,7 +12,7 @@
 .toggle:before {
   box-shadow: 0;
   border-radius: 84.5px;
-  background: #fff;
+  background: var(--secondary-color);
   position: absolute;
   margin-left: -36px;
   margin-top: -36px;
@@ -99,7 +99,7 @@
   font-size: 20px;
   width: 100%;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--primary-color);
   padding: 5px 0;
   background-color: transparent;
   outline: none;
@@ -109,7 +109,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: black;
+  color: var(--primary-color);
   transition: all 0.3s ease;
   pointer-events: none;
 }
@@ -118,7 +118,7 @@
 .input-container input[type="text"]:valid~.label {
   top: -20px;
   font-size: 16px;
-  color: #333;
+  color: var(--secondary-black-color);
 }
 
 .input-container .underline {
@@ -127,7 +127,7 @@
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: #333;
+  background-color: var(--secondary-black-color);
   transform: scaleX(0);
   transition: all 0.3s ease;
 }
@@ -137,10 +137,6 @@
   transform: scaleX(1);
 }
 
-
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -149,7 +145,7 @@
 }
 
 body {
-  background-color: #e0e0e0;
+  background-color: var(--body-color);
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -173,7 +169,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
+  background-color: var(--secondary-color);
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -186,17 +182,19 @@ body {
 .logo {
   width: 140px;
   height: 140px;
-  background-color: #000;
+  background-color: var(--primary-color);
   border-radius: 20%;
-
 }
 
 .user-avatar {
   width: 80px;
   height: 80px;
-  background-color: #000;
+  background-color: var(--primary-color);
   border-radius: 50%;
+}
 
+.user-name {
+  color: var(--primary-color);
 }
 
 .sidebar h2 {
@@ -204,15 +202,15 @@ body {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
-  color: #000000;
+  color: var(--primary-color);
 }
 
 #dif {
   width: 100%;
   padding: 14px;
   text-align: center;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   border: none;
   font-weight: bold;
   border-radius: 50px;
@@ -225,7 +223,7 @@ body {
   padding: 14px;
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: var(--primary-color);
   border: none;
   font-weight: bold;
   border-radius: 50px;
@@ -268,7 +266,7 @@ body {
 }
 
 .search-bar:focus {
-  border: 1px solid #000;
+  border: 1px solid var(--primary-color);
   outline: none;
 }
 
@@ -280,7 +278,7 @@ body {
 .top-icons .icon {
   width: 63px;
   height: 63px;
-  background-color: #000;
+  background-color: var(--primary-color);
   border-radius: 50%;
 }
 
@@ -304,7 +302,7 @@ body {
   font-family: horizon;
   font-size: 30px;
   font-weight: bold;
-  color: #000;
+  color: var(--primary-color);
 }
 
 .timeline .date-filter {
@@ -316,7 +314,7 @@ body {
 
 .date-filter div {
   font-size: 18px;
-  color: black;
+  color: var(--primary-color);
 }
 
 .filters {
@@ -327,7 +325,7 @@ body {
 .filters div {
   padding: 5px 15px;
   background-color: transparent;
-  color: #777777;
+  color: var(--dark-body-color);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -374,12 +372,12 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.starred.white {
-  background-color: white;
+.starred.light {
+  background-color: var(--secondary-color);
 }
 
-.starred.black {
-  background-color: #000;
+.starred.dark {
+  background-color: var(--primary-color);
 }
 
 .starred:hover {
@@ -391,13 +389,13 @@ body {
   top: 10px;
   right: 10px;
   font-size: 20px;
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 /* Files Section */
 .files-section {
   background-color: transparent;
-  border: 2px white solid;
+  border: 2px var(--primary-color) solid;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -408,7 +406,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: black;
+  color: var(--primary-color);
 }
 
 .file-list-container {
@@ -423,7 +421,7 @@ body {
   gap: 10px;
   padding: 10px;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
 
   background-color: transparent;
   transition: background-color 0.3s ease;
@@ -436,7 +434,7 @@ body {
 .small-circle {
   width: 20px;
   height: 20px;
-  background-color: #000;
+  background-color: var(--primary-color);
   border-radius: 50%;
 }
 
@@ -451,7 +449,7 @@ body {
   align-items: center;
   gap: 5px;
   font-weight: bold;
-  color: black;
+  color: var(--primary-color);
 }
 
 /* Adicione essa seção ao CSS existente */
