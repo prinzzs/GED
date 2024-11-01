@@ -4,7 +4,7 @@ class Document {
   constructor(name, type, size, sender) {
     this.name = name;
     this.type = type;
-    this.size = this.newSize();
+    this.size = size;
     this.sender = sessionStorage.getItem("activeUser");
     this.idNumber = this.setIdNumber();
   }
@@ -65,7 +65,6 @@ function createDocumentHTML(document) {
       <h4>`+document.sender+`</h4>
     </div>`;
     $("#file-container").append(documentHTML);
-    $("#div-items-document").append(documentHTML.cloneNode(true));
   }
 
 function loadAllDocuments() {

@@ -13,8 +13,9 @@
 
 @font-face {
     font-family: horizon;
-    src: url('../Assets/fonts/horizon.otf') format('truetype');
+    src: url('../Assets/fonts/Horizon.otf') format('truetype');
   }
+  
 * {
     box-sizing: border-box;
     margin: 0;
