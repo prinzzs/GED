@@ -61,7 +61,7 @@ function createDocumentHTML(document) {
     <div class="borda">
       <img src="../Assets/DocumentImages/`+document.typeImage+`.png" onerror="this.onerror=null;this.src='../Assets/DocumentImages/others.png'" width="64">
       <h2>`+document.name+`</h2>
-      <h3>`+document.size+`</h3>
+      <h3>`+document.newSize()+`</h3>
       <h4>`+document.sender+`</h4>
     </div>`;
     $("#file-container").append(documentHTML);
