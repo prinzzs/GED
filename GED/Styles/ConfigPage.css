@@ -1,7 +1,8 @@
+
 body {
   background-color: #e2e2e2;
   color: #000;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 .settings-container {
@@ -10,6 +11,7 @@ body {
   padding: 20px;
   margin-top: 0%;
   padding-top: 0%;
+  
 }
 
 .settings-title {
@@ -23,6 +25,7 @@ body {
 }
 
 .settings-section {
+  
   margin-bottom: 30px;
   padding: 15px;
   border: 1px solid #fff;
@@ -39,10 +42,10 @@ body {
   font-family: Creolia;
 }
 
-.form-select {
+.form-select{
   border: 1px solid rgb(167, 167, 167);
   color: black;
-  background-color: #09090f;
+  background-color: #09090F;
 }
 
 .form-select:focus {
@@ -52,7 +55,7 @@ body {
 .btn-primary {
   color: white;
   background-color: black;
-  border: 0px;
+  border:0px;
   border-radius: 10px;
   font-size: 19px;
 }
@@ -64,8 +67,8 @@ body {
 
 .btn-primary1 {
   color: white;
-  background-color: #6b63b5;
-  border: 0px;
+  background-color: #6B63B5;
+  border:0px;
   border-radius: 10px;
   font-size: 19px;
 }
@@ -75,16 +78,16 @@ body {
   background-color: #475292;
 }
 
-.form-label {
+.form-label{
   font-size: 19px;
 }
 
-.form-control {
-  background-color: #09090f;
+.form-control{
+  background-color: #09090F;
 }
-.form-control:focus {
-  background-color: #09090f;
+.form-control:focus{
+  background-color: #09090F;
 }
-.form-check-input:checked {
-  background-color: #475292;
+.form-check-input:checked{
+  background-color: #475292 ;
 }

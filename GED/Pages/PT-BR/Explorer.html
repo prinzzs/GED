@@ -8,157 +8,43 @@
     <link rel="stylesheet" href="../../Styles/Main.css">
     <link rel="stylesheet" href="../../Styles/document.css">
     <link rel="stylesheet" href="../../Styles/Explorer.css">
-    <style>
-        body {
-            background-color: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .container-general {
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr 4fr;
-            gap: 20px;
-        }
-
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            width: 140px;
-            height: 140px;
-            background-color: #000;
-            border-radius: 20%;
-        }
-
-        .user-avatar {
-            width: 80px;
-            height: 80px;
-            background-color: #000;
-            border-radius: 50%;
-        }
-
-        .sidebar h2 {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            color: #333;
-        }
-
-        #dif {
-            width: 100%;
-            padding: 14px;
-            text-align: center;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            font-weight: bold;
-            border-radius: 50px;
-            margin: 14px;
-
-        }
-
-        .menu-item {
-            width: 100%;
-            padding: 14px;
-            text-align: center;
-            background-color: transparent;
-            color: black;
-            border: none;
-            font-weight: bold;
-            border-radius: 50px;
-            margin: 14px;
-
-        }
-
-        .menu-item:hover {
-            background-color: #b6b6b6;
-        }
-
-        @media (max-width: 1024px) {
-            .container-general {
-                grid-template-columns: 1fr 3fr;
-            }
-
-            .sidebar {
-                display: flex;
-                justify-content: center;
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .sidebar{
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .sidebar {
-                align-items: center;
-            }
-
-            .menu-item,
-            #dif {
-                font-size: 14px;
-                padding: 10px;
-                margin: 8px;
-            }
-        }
-
-        /* Para telas de atÃ© 1024px */
-        @media (max-width: 1024px) {
-
-        }
-
-        /* Para telas de atÃ© 768px */
-        @media (max-width: 768px) {
-
-        }
-
-        /* Para telas de atÃ© 480px */
-        @media (max-width: 480px) {
-
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="container-general">
-        <!-- Sidebar -->
+    <div class="container-general" style="z-index: 2;">
         <div class="sidebar">
             <div class="logo"></div>
-            <h2>MAIS PÁGINAS</h2>
-            <button class="menu-item">Tela inicial</button>
-            <button class="menu-item"  id="dif">Área de trabalho</button>
-            <button class="menu-item">Lixeira</button>
-            <button class="menu-item">Linha do tempo</button>
-            <button class="menu-item">Configurações</button>
+            <h2>MAIS <br> PÁGINAS</h2>
+            <a href="./Home.html" class="menu-item">Tela Inicial</a>
+            <a href="" class="menu-item"  id="dif">Área de trabalho</a>
+            <a href="#" class="menu-item">Lixeira</a>
+            <a href="#" class="menu-item">Linha do tempo</a>
+            <a href="./ConfigPage.html" class="menu-item">Configurações</a>
             <div class="user-avatar"></div>
             <div>Nome usuário</div>
+        </div>
+
+        <div id="document-items">
+            <div id="container-folder">
+                <div class="description-part">
+                    <h2>Pastas</h2>
+                    <h3>Ver mais</h3>
+                </div>
+                <div class="div-items-folder">
+                    <!-- Vai aparecer aqui quando colocar os bgl-->
+                </div>
+            </div>
+
+            <div id="container-document">
+                <div class="description-part">
+                    <h2>Arquivos</h2>
+                    <h3>Ver mais</h3>
+                </div>
+                <div id="div-items-document">
+                    <!-- Vai aparecer aqui quando colocar os bgl-->
+                </div>
+            </div>
         </div>
     </div>
 

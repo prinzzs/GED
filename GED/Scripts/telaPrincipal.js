@@ -1,44 +1,29 @@
-const btnDropdown = document.getElementById("dropdownButton");
-let opacityEffect = document.getElementById("opacity-Effect");
-let btnOptions2 = document.getElementById("btn-Options2");
-let container = document.getElementById("container");
-let fileInputWrapper = document.getElementById("fileInputWrapper");
-let fileInput = document.getElementById("fileInput");
+const dropdownButton = document.getElementById("dropdownButton");
+const opacityEffect = document.getElementById("opacity-Effect");
+const fileInputWrapper = document.getElementById("fileInputWrapper");
+const btnOptions2 = document.getElementById("btn-Options2");
 
-// Sempre que o botão de dropdown for clicado, ele deixará o fundo mais escuro mudando a opacidade
-btnDropdown.addEventListener("focus", () => {
+// Ativa a sobreposição ao abrir o dropdown
+dropdownButton.addEventListener("click", () => {
   opacityEffect.style.opacity = 0.5;
-  opacityEffect.style.backgroundColor = "rgba(0,0,0,0.5)";
+  opacityEffect.style.pointerEvents = "auto"; // Ativa o efeito de opacidade
 });
 
-// Sempre que o botão de adicionar documento for clicado, ele também deixará o fundo mais escuro, além disso tirará a invisibilidade do
-// fileInputWrapper que é o container que mostrará os documentos.
+// Fecha o menu e remove a sobreposição ao clicar fora do menu de opções
+opacityEffect.addEventListener("click", () => {
+  opacityEffect.style.opacity = 0;
+  opacityEffect.style.pointerEvents = "none";
+  fileInputWrapper.style.display = "none";
+});
+
+// Mostra o fileInputWrapper ao clicar no botão de upload
 btnOptions2.addEventListener("click", () => {
-  opacityEffect.style.opacity = 0.5;
-  opacityEffect.style.backgroundColor = "rgba(0,0,0,0.5)";
   fileInputWrapper.style.display = "flex";
-
-  // Toda vez que qualquer lugar que for clicado e não seja a parte de documento, a tela voltará ao normal. e o fileInputWrapper
-  // ficará invisivel denovo
-  container.addEventListener("click", (event) => {
-    if (!fileInputWrapper.contains(event.target)) {
-      opacityEffect.style.opacity = 1;
-      opacityEffect.style.backgroundColor = "";
-
-      fileInputWrapper.style.display = "none";
-    }
-  });
+  opacityEffect.style.opacity = 0.5;
+  opacityEffect.style.pointerEvents = "auto";
 });
 
-// Sempre que o botão de dropdown perder o foco, a tela voltará ao normal.
-// OBS: Arrumar depois. Após clicar em um dos botões de adicionar documento ou pasta, a tela fica na coloração padrão por 0.5 segundos
-btnDropdown.addEventListener("blur", () => {
-  opacityEffect.style.opacity = 1;
-  opacityEffect.style.backgroundColor = "";
-});
-
-// Quando a tela de documentos aparece, ela não tem nenhum elemento e contém uma imagem no meio dela, após ocorrer uma mudança
-// (no caso um documento for adicionado) a imagem no meio sumirá;
+// Remove a imagem de fundo quando um documento é adicionado
 fileInput.addEventListener("change", () => {
   fileInputWrapper.style.backgroundImage = "none";
 });

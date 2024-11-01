@@ -154,8 +154,21 @@ input[type="file"]::-webkit-file-upload-button {
 /* Esse é o container que ficará basicamente todo o conteúdo da página, ele e o conteúdo dele ficarão mais escuros quando o botão de Adicionar +
 for clicado.*/
 #opacity-Effect {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: 1s all ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* Não interfere com cliques nos elementos abaixo */
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.corner-button {
+  position: fixed;
+  top: 90%;
+  left: calc(85% - 110px);
+  z-index: 10; /* Coloca o botão acima da sobreposição */
 }

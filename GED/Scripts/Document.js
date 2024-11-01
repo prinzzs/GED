@@ -4,7 +4,7 @@ class Document {
   constructor(name, type, size, sender) {
     this.name = name;
     this.type = type;
-    this.size = size;
+    this.size = this.newSize();
     this.sender = sessionStorage.getItem("activeUser");
     this.idNumber = this.setIdNumber();
   }
@@ -23,7 +23,7 @@ class Document {
  
   // Converte o tamanho do documento para KB ou MB
   newSize() {
-    if (this.size.length < 7) {
+    if (this.size < 7) {
       return this.size = `${Math.round(+this.size / 1024).toFixed(2)}KB`;
     } else {
       return this.size = `${(Math.round(+this.size / 1024) / 1000).toFixed(2)}MB`;
@@ -61,16 +61,16 @@ function createDocumentHTML(document) {
     <div class="borda">
       <img src="../Assets/DocumentImages/`+document.typeImage+`.png" onerror="this.onerror=null;this.src='../Assets/DocumentImages/others.png'" width="64">
       <h2>`+document.name+`</h2>
-      <h3>`+document.newSize()+`</h3>
+      <h3>`+document.size+`</h3>
       <h4>`+document.sender+`</h4>
     </div>`;
     $("#file-container").append(documentHTML);
+    $("#div-items-document").append(documentHTML.cloneNode(true));
   }
 
 function loadAllDocuments() {
   let documentStorage = JSON.parse(localStorage.getItem("documents"));
   if (documentStorage)
-    
     for (const [key, value] of Object.entries(documentStorage))
       createDocumentHTML(value);
 }
