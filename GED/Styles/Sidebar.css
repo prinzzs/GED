@@ -68,16 +68,8 @@
   background-color: #b6b6b6;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: none;
-  background-color: none;
-}
-
 @media (max-width: 768px) {
-  .sidebar, .main-content {
+  .sidebar {
     width: 100%;
   }
 }
@@ -91,20 +83,5 @@
     font-size: 14px;
     padding: 10px;
     margin: 8px;
-  }
-}
-
-/* Para telas de até 1024px */
-@media (max-width: 1024px) {
-  .main-content > div {
-    display: flex;
-    flex-direction: column;
-  }
-}
-/* Para telas de até 480px */
-@media (max-width: 480px) {
-  /* Ajustes para dispositivos muito pequenos */
-  .main-content {
-    padding: 10px;
   }
 }
