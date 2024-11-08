@@ -68,10 +68,13 @@ function createDocumentHTML(document) {
 
   let realDocumentHTML = `
     <div class="border">
+      <div class="icon-container">
+        <img src="../../Assets/icons/star.svg" class="document-icon">
+        <img src="../../Assets/icons/dots.svg" class="document-icon">
+      </div>
       <img src="../../Assets/DocumentImages/`+document.type+`.png" onerror="this.onerror=null;this.src='../../Assets/DocumentImages/others.png'" width="64">
       <h2>`+document.name+`</h2>
       <h3>`+document.size+`</h3>
-      <h4>`+document.sender+`</h4>
     </div>`;
 
   $(".div-items-document").append(realDocumentHTML);
