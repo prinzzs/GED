@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurações</title>
     <link href="../../Styles/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../Styles/Main.css">
+    
     <link rel="stylesheet" href="../../Styles/ConfigPage.css">
 </head>
 
@@ -75,5 +75,19 @@
     <a href="./Login.html" class="btn btn-primary text-center">SAIR DA CONTA</a>
 
     <script src="../../Scripts/DarkMode.js"></script>
+    <script>
+        var togglePassword = document.getElementById("togglePassword");
+             var passwordInput = document.getElementById("exampleInputPassword1");
+             var emailInput = document.getElementById("exampleInputEmail1");
+     
+             // Função para mostrar/ocultar a senha
+             togglePassword.onclick = function() {
+                 if (passwordInput.type === 'password') {
+                     passwordInput.setAttribute('type', 'text');
+                 } else {
+                     passwordInput.setAttribute('type', 'password');
+                 }
+             }
+     </script>
 </body>
 </html>

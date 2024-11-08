@@ -1,3 +1,32 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Dados do formulário
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = md5($_POST['senha']); // Criptografa a senha com md5
+
+    // Formatação do conteúdo
+    $conteudo = $nome . "," . $email . "," . $senha . "\n";
+
+    // Caminho do arquivo
+    $pasta = 'cadastros';
+    $caminho = $pasta . '/cliente.txt';
+
+    // Verifica se a pasta existe, se não, cria a pasta
+    if (!is_dir($pasta)) {
+        mkdir($pasta, 0755, true); // 0755 dá permissões de leitura e execução para o proprietário e leitura para outros
+    }
+
+    // Adiciona os dados ao arquivo
+    file_put_contents($caminho, $conteudo, FILE_APPEND);
+
+    // Redireciona para a página de sucesso ou exibe uma mensagem
+    header("Location: ./Home.html");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -13,28 +42,30 @@
 
     <main class="container">
         <section class="continue-section">
-            <h2>CONTINUAR COM</h2>
+            <h2 >CONTINUAR COM</h2>
             <a href="./Login.html" class="no-account">JÁ TENHO UMA CONTA</a>
         </section>
 
         <section class="register-section">
-            <h1>CADASTRO</h1>
-            <form>
-                <input type="text" id="nome" name="nome" placeholder="Nome" class="input-Accounts">
-                <input type="email" id="email" name="email" placeholder="Email" class="input-Accounts">
-                <input type="password" id="senha" name="senha" placeholder="Senha" class="input-Accounts">
-
+            <h1 style="font-family: horizon;">CADASTRO</h1>
+            <form action="caminho/do/arquivo.php" method="POST">
+                <input type="text" id="nome" name="nome" placeholder="Nome" class="input-Accounts" required>
+                <input type="email" id="email" name="email" placeholder="Email" class="input-Accounts" required>
+                <input type="password" id="senha" name="senha" placeholder="Senha" class="input-Accounts" required>
+            
                 <label>
-                    <input type="checkbox" id="terms" name="terms"> Condições de uso
+                    <input type="checkbox" id="terms" name="terms" required> <a href="">Termos e Condições de uso</a> 
                 </label>
-
+            
                 <div class="buttons">
                     <a href="./Index.html" class="back-button">VOLTAR</a>
-                    <a href="./Home.html" class="register-button">CADASTRE-SE</a>
+                    <button type="submit" class="register-button">CADASTRE-SE</button>
                 </div>
             </form>
+            
         </section>
     </main>
     <script src="../../Scripts/DarkMode.js"></script>
+    
 </body>
 </html>
