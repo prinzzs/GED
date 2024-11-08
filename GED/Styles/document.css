@@ -21,6 +21,7 @@
   justify-content: center;
   background-color: rgb(255, 255, 255);
   position: relative;
+  z-index: 10;
 }
 
 /* Esse input  fica dentro do botão de adicionar documento, ele ocupa todo o espaço do botão e é invisivel.(desabilite opacity para ver)*/
@@ -42,7 +43,8 @@ input[type="file"]::-webkit-file-upload-button {
 /* Esse elemento é a estilização do documento quando ele é colocado, por enquanto não é nada demais e precisa de muitas melhorias.*/
 .borda {
   border: 1px solid var(--primary-color);
-  width: 125px;
+  border-radius: 10px;
+  width: 200px;
   overflow: hidden; /* Quando um elemento ultrapassar o espaço que não devia, parte da frase ficará invisivel*/
   height: 200px;
   display: flex;
@@ -62,6 +64,7 @@ input[type="file"]::-webkit-file-upload-button {
   justify-content: center;
   flex-wrap: wrap;
   overflow-y: auto;
+  z-index: 10;
   /* Caso o numero de documentos seja muito grande e o width não consiga controla, os elementos vão pra baixo e é criado um scroll do lado 
     do container para conseguir ver os documentos*/
 }
